@@ -1,0 +1,14 @@
+name: AdvancedFeed
+version: 1.1
+api: [3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11]
+description: Advanced Feeding System for PocketMine-MP
+author: iiFlamiinBlaze
+main: iiFlamiinBlaze\AdvancedFeed\AdvancedFeed
+commands:
+ feed:
+  description: Commands that feeds the player
+  permission: feed.command
+  usage: "/feed <player>"
+permission:
+ feed.command:
+  default: op
