@@ -22,7 +22,7 @@ use pocketmine\Player;
 
 class AdvancedFeed extends PluginBase{
 
-    const VERSION = "v1.1";
+    const VERSION = "v1.1.1";
     const PREFIX = TextFormat::AQUA . "AdvancedFeed" . TextFormat::GOLD . " > ";
 
     public function onEnable() : void{
@@ -35,7 +35,7 @@ class AdvancedFeed extends PluginBase{
                 $sender->sendMessage(TextFormat::RED . "Use this command in-game");
                 return false;
             }
-            if(!isset($args[0])){
+            if(empty($args[0])){
                 $sender->sendMessage(TextFormat::GRAY . "Usage: /feed <player>");
                 return false;
             }
