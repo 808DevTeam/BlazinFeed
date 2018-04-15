@@ -1,5 +1,12 @@
 <?php
 /**
+ *  ____  _            _______ _          _____
+ * |  _ \| |          |__   __| |        |  __ \
+ * | |_) | | __ _ _______| |  | |__   ___| |  | | _____   __
+ * |  _ <| |/ _` |_  / _ \ |  | '_ \ / _ \ |  | |/ _ \ \ / /
+ * | |_) | | (_| |/ /  __/ |  | | | |  __/ |__| |  __/\ V /
+ * |____/|_|\__,_/___\___|_|  |_| |_|\___|_____/ \___| \_/
+ *
  * Copyright (C) 2018 iiFlamiinBlaze
  *
  * iiFlamiinBlaze's plugins are licensed under MIT license!
@@ -22,11 +29,13 @@ use pocketmine\Player;
 
 class AdvancedFeed extends PluginBase{
 
-    const VERSION = "v1.1.1";
+    const VERSION = "v1.2.0";
     const PREFIX = TextFormat::AQUA . "AdvancedFeed" . TextFormat::GOLD . " > ";
 
     public function onEnable() : void{
-        $this->getLogger()->info(AdvancedFeed::PREFIX . "AdvancedFeed  " . AdvancedFeed::VERSION . " by iiFlamiinBlaze is enabled!");
+        @mkdir($this->getDataFolder());
+        $this->saveDefaultConfig();
+        $this->getLogger()->info("AdvancedFeed " . self::VERSION . " by iiFlamiinBlaze is enabled");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
@@ -35,22 +44,24 @@ class AdvancedFeed extends PluginBase{
                 $sender->sendMessage(TextFormat::RED . "Use this command in-game");
                 return false;
             }
-            if(empty($args[0])){
-                $sender->sendMessage(TextFormat::GRAY . "Usage: /feed <player>");
-                return false;
-            }
             if(!$sender->hasPermission("feed.command")){
-                $sender->sendMessage(AdvancedFeed::PREFIX . TextFormat::RED . "You do not have permission to use this command.");
+                $sender->sendMessage(self::PREFIX . TextFormat::RED . "You do not have permission to use this command");
                 return false;
             }
-            $player = $this->getServer()->getPlayer($args[0]);
+            if(empty($args[0])){
+                $sender->setFood(20);
+                $sender->setSaturation(20);
+                $sender->sendMessage($this->getConfig()->get("fed-message"));
+                return false;
+            }
             if($this->getServer()->getPlayer($args[0])){
+                $player = $this->getServer()->getPlayer($args[0]);
                 $player->setFood(20);
                 $player->setSaturation(20);
-                $player->sendMessage(AdvancedFeed::PREFIX . TextFormat::GREEN . "You have now been fed!");
-                $sender->sendMessage(AdvancedFeed::PREFIX . TextFormat::GREEN . "You have fed " . $player->getName() . ".");
+                $player->sendMessage($this->getConfig()->get("fed-message"));
+                $sender->sendMessage(self::PREFIX . TextFormat::GREEN . "You have fed " . $player->getName());
             }else{
-                $sender->sendMessage(AdvancedFeed::PREFIX . TextFormat::RED . "Player not found.");
+                $sender->sendMessage(self::PREFIX . TextFormat::RED . "Player not found");
                 return false;
             }
         }
