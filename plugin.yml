@@ -1,9 +1,9 @@
-name: AdvancedFeed
-version: 1.2.0
+name: BlazinFeed
+version: 1.2.1
 api: [3.0.0-ALPHA9, 3.0.0-ALPHA10, 3.0.0-ALPHA11, 3.0.0-ALPHA12]
-description: Advanced Feeding System for PocketMine-MP
+description: Feeding System for PocketMine-MP
 author: iiFlamiinBlaze
-main: iiFlamiinBlaze\AdvancedFeed\AdvancedFeed
+main: iiFlamiinBlaze\BlazinFeed\BlazinFeed
 commands:
  feed:
   description: Commands that feeds the player

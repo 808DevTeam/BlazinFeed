@@ -19,7 +19,7 @@
  */
 declare(strict_types=1);
 
-namespace iiFlamiinBlaze\AdvancedFeed;
+namespace iiFlamiinBlaze\BlazinFeed;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
@@ -27,15 +27,15 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
-class AdvancedFeed extends PluginBase{
+class BlazinFeed extends PluginBase{
 
-    const VERSION = "v1.2.0";
-    const PREFIX = TextFormat::AQUA . "AdvancedFeed" . TextFormat::GOLD . " > ";
+    const VERSION = "v1.2.1";
+    const PREFIX = TextFormat::AQUA . "BlazinFeed" . TextFormat::GOLD . " > ";
 
     public function onEnable() : void{
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
-        $this->getLogger()->info("AdvancedFeed " . self::VERSION . " by iiFlamiinBlaze is enabled");
+        $this->getLogger()->info("BlazinFeed " . self::VERSION . " by iiFlamiinBlaze is enabled");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
