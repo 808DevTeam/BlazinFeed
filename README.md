@@ -1,15 +1,20 @@
 # [![BlazeTheDev](https://i.imgur.com/fgVMXSe.png?1)]()
 
-<a href="https://discord.gg/znEsFsG"><img src="https://discordapp.com/api/guilds/425712766687510528/embed.png" alt="Discord server"/></a> 
-
 ## License
-* [BlazinFeed License](https://github.com/iiFlamiinBlaze/AdvancedFeed/blob/master/LICENSE), make sure to read all of the license!
-* This license is subject to change at anytime! 
+| License |
+| :---: |
+| [![BlazinVanish License](https://img.shields.io/github/license/iiFlamiinBlaze/BlazinFeed.svg?label=License)](LICENSE) |
+
+Make sure to read all of the license as it could change at anytime.
 
 ## Information
-This plugin allows you to use /feed in survival mode to fill your hunger. This plugin is for anyone to use and has a customizable config for the messages.
-* Credits: [iiFlamiinBlaze](https://github.com/iiFlamiinBlaze)
-* **Anyone associated with leet.cc (beetree, spajk, MrCakeSlayer etc.) MAY NOT use this plugin!**
+| Download | View Count | Discord |
+| :---: | :---: | :---: |
+ [![Download](https://img.shields.io/badge/download-latest-blue.svg)](https://poggit.pmmp.io/ci/iiFlamiinBlaze/BlazinFeed/) | [![View Count](http://hits.dwyl.io/iiFlamiinBlaze/BlazinFeed.svg)](http://hits.dwyl.io/iiFlamiinBlaze/BlazinFeed) | <a href="https://discord.gg/znEsFsG"><img src="https://discordapp.com/api/guilds/425712766687510528/embed.png" alt="Discord server"/></a> |
+ 
+This plugin allows you to add a title to a player when they join the server through configs. This plugin is for anyone to use.
+If you have any issues with the plugin, please make an issue [here](https://github.com/iiFlamiinBlaze/BlazinFeed/issues/new).
+* Credits: [BlazeTheDev](https://github.com/iiFlamiinBlaze)
 
 ## How to use
-* [BlazinFeed Wiki](https://github.com/iiFlamiinBlaze/AdvancedFeed/wiki/)
+For more info about how to use the plugin go to the [BlazinFeed Wiki](https://iiflamiinblaze.github.io/projects/blazinfeed/).
