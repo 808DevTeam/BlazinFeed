@@ -6,9 +6,9 @@
 # |____/|_|\__,_/___\___|_|  |_| |_|\___|_____/ \___| \_/
 
 # BlazinFeed Configuration File:
-#  Use the § symbol for color coding
+#  Use the § or & symbol for color coding
 #   Default Config:
-#     fed-message: "§aYou have now been fed"
+#     fed-message: "§bYou Have Now Been Fed"
 
 # This message will be sent to the player when they are fed
-fed-message: "§aYou have now been fed"
+fed-message: "§bYou Have Now Been Fed"
