@@ -35,17 +35,17 @@ class BlazinFeed extends PluginBase{
     public function onEnable() : void{
         @mkdir($this->getDataFolder());
         $this->saveDefaultConfig();
-        $this->getLogger()->info("BlazinFeed " . self::VERSION . " by iiFlamiinBlaze is enabled");
+        $this->getLogger()->info("BlazinFeed" . self::VERSION . "by iiFlamiinBlaze is enabled");
     }
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         if($command->getName() === "feed"){
             if(!$sender instanceof Player){
-                $sender->sendMessage(TextFormat::RED . "Use this command in-game");
+                $sender->sendMessage(TextFormat::RED . "Use This Command In-Game");
                 return false;
             }
             if(!$sender->hasPermission("feed.command")){
-                $sender->sendMessage(self::PREFIX . TextFormat::RED . "You do not have permission to use this command");
+                $sender->sendMessage(self::PREFIX . TextFormat::RED . "You Do Not Have Permission To Use This Command");
                 return false;
             }
             if(empty($args[0])){
@@ -59,9 +59,9 @@ class BlazinFeed extends PluginBase{
                 $player->setFood(20);
                 $player->setSaturation(20);
                 $player->sendMessage($this->getConfig()->get("fed-message"));
-                $sender->sendMessage(self::PREFIX . TextFormat::GREEN . "You have fed " . $player->getName());
+                $sender->sendMessage(self::PREFIX . TextFormat::GREEN . "You Have Fed" . $player->getName());
             }else{
-                $sender->sendMessage(self::PREFIX . TextFormat::RED . "Player not found");
+                $sender->sendMessage(self::PREFIX . TextFormat::RED . "Player Not Found");
                 return false;
             }
         }
